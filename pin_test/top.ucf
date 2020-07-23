@@ -1,0 +1,9 @@
+CONFIG VCCAUX = "3.3" ;
+
+NET "clk"     LOC = V10 | IOSTANDARD = LVCMOS33 | PERIOD = 100MHz;
+
+NET "enable"  LOC = L17  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; # DIP Switch 4 
+
+NET "out0"    LOC = U7  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # LED D1
+
+NET "in0"     LOC = A11  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;  # Header 3, Pin 8
