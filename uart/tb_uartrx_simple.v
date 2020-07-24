@@ -75,6 +75,37 @@ module tb_uartrx_simple;
     // Stop bit
     rx = 1'b1;
     #(`CLK_PERIOD * `BAUD_MULT);
+        
+    // Start bit
+    rx = 0;
+    #(`CLK_PERIOD * `BAUD_MULT);
+    // bit 0
+    rx = 1'b0;
+    #(`CLK_PERIOD * `BAUD_MULT);
+    // bit 1
+    rx = 1'b1;
+    #(`CLK_PERIOD * `BAUD_MULT);
+    // bit 2
+    rx = 1'b1;
+    #(`CLK_PERIOD * `BAUD_MULT);
+    // bit 3
+    rx = 1'b0;
+    #(`CLK_PERIOD * `BAUD_MULT);
+    // bit 4
+    rx = 1'b1;
+    #(`CLK_PERIOD * `BAUD_MULT);
+    // bit 5
+    rx = 1'b0;
+    #(`CLK_PERIOD * `BAUD_MULT);
+    // bit 6
+    rx = 1'b1;
+    #(`CLK_PERIOD * `BAUD_MULT);
+    // bit 7
+    rx = 1'b1;
+    #(`CLK_PERIOD * `BAUD_MULT);
+    // Stop bit
+    rx = 1'b1;
+    #(`CLK_PERIOD * `BAUD_MULT);
 
     #(`CLK_PERIOD * 10);
 	end

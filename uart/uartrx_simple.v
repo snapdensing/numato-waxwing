@@ -65,9 +65,19 @@ module uartrx_simple(
           S_SAMPLE:
             sample_ctr = sample_ctr + 1;
         endcase
+        
+    // Shift register
+    reg [7:0] rxsr;
+    always@(posedge clk)
+    if (!nrst)
+      rxsr = 0;
+    else
+      if (en_sample && (state == S_SAMPLE))
+        rxsr = {rx, rxsr[7:1]};
+      
 
     //dummy output
-    assign dout = 8'd0;
+    assign dout = rxsr;
     assign out_state = state;
     assign out_sample_ctr = sample_ctr;
 endmodule
