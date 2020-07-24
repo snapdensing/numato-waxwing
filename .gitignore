@@ -36,3 +36,6 @@
 *.xml
 *.log
 *.gise
+*.ini
+*.exe
+*.wdb

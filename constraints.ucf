@@ -135,10 +135,10 @@ CONFIG VCCAUX = "3.3" ;
 ###################################################################################################################################################
 #                                                 DIP Switches                                                                                    #
 ################################################################################################################################################### 
-    #NET "DPSwitch[0]"                     LOC = L17  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
-    #NET "DPSwitch[1]"                     LOC = C18  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
-    #NET "DPSwitch[2]"                     LOC = C17  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
-    #NET "DPSwitch[3]"                     LOC = G14  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+    #NET "DPSwitch[0]"                     LOC = L17  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; # U6-4
+    #NET "DPSwitch[1]"                     LOC = C18  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; # U6-3
+    #NET "DPSwitch[2]"                     LOC = C17  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; # U6-2
+    #NET "DPSwitch[3]"                     LOC = G14  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; # U6-1
     
 ###################################################################################################################################################
 #                                                   Micro SD Card                                                                                 #
@@ -152,25 +152,25 @@ CONFIG VCCAUX = "3.3" ;
 ###################################################################################################################################################
 #                                              Push Buttons Switches                                                                              #
 ################################################################################################################################################### 
-    #NET "Switch[6]"                       LOC = F14   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
-    #NET "Switch[5]"                       LOC = A14   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
-    #NET "Switch[4]"                       LOC = T6    | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
-    #NET "Switch[3]"                       LOC = R5    | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
-    #NET "Switch[2]"                       LOC = B14   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
-    #NET "Switch[1]"                       LOC = V6    | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
-    #NET "Switch[0]"                       LOC = T5    | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+    #NET "Switch[6]"                       LOC = F14   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; # SW1
+    #NET "Switch[5]"                       LOC = A14   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; # SW2
+    #NET "Switch[4]"                       LOC = T6    | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; # SW3
+    #NET "Switch[3]"                       LOC = R5    | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; # SW4
+    #NET "Switch[2]"                       LOC = B14   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; # SW5
+    #NET "Switch[1]"                       LOC = V6    | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; # SW6
+    #NET "Switch[0]"                       LOC = T5    | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; # SW7
      
 ###################################################################################################################################################
 #                                                    LEDs                                                                                         #
 ################################################################################################################################################### 
-    #NET "LED[7]"                          LOC = F9  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
-    #NET "LED[6]"                          LOC = G9  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
-    #NET "LED[5]"                          LOC = C15 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
-    #NET "LED[4]"                          LOC = A15 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
-    #NET "LED[3]"                          LOC = U5  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
-    #NET "LED[2]"                          LOC = V5  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
-    #NET "LED[1]"                          LOC = V7  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
-    #NET "LED[0]"                          LOC = U7  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    #NET "LED[7]"                          LOC = F9  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # D8
+    #NET "LED[6]"                          LOC = G9  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # D7
+    #NET "LED[5]"                          LOC = C15 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # D6
+    #NET "LED[4]"                          LOC = A15 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # D5
+    #NET "LED[3]"                          LOC = U5  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # D4
+    #NET "LED[2]"                          LOC = V5  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # D3
+    #NET "LED[1]"                          LOC = V7  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # D2
+    #NET "LED[0]"                          LOC = U7  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # D1
 
 ###################################################################################################################################################
 #                                              Seven Segment Display                                                                              #
