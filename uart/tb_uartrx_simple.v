@@ -11,8 +11,6 @@ module tb_uartrx_simple;
 
 	// Outputs
 	wire [7:0] dout;
-  wire out_state;
-  wire [2:0] out_sample_ctr;
 
 	// Instantiate the Unit Under Test (UUT)
 	uartrx_simple uut (
@@ -20,9 +18,7 @@ module tb_uartrx_simple;
 		.nrst(nrst), 
 		.en(en), 
 		.rx(rx), 
-		.dout(dout),
-    .out_state(out_state),
-    .out_sample_ctr(out_sample_ctr)
+		.dout(dout)
 	);
   
   always begin

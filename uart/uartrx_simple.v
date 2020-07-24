@@ -5,9 +5,7 @@ module uartrx_simple(
     input nrst,
     input en,
     input rx,
-    output [7:0] dout,
-    output out_state,
-    output [2:0] out_sample_ctr
+    output [7:0] dout
     );
     
     // Baud counter
@@ -75,9 +73,6 @@ module uartrx_simple(
       if (en_sample && (state == S_SAMPLE))
         rxsr = {rx, rxsr[7:1]};
       
-
-    //dummy output
     assign dout = rxsr;
-    assign out_state = state;
-    assign out_sample_ctr = sample_ctr;
+
 endmodule
