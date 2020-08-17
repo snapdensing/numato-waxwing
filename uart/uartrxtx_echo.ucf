@@ -1,0 +1,8 @@
+CONFIG VCCAUX = "3.3" ;
+NET "clk"   LOC = V10 | IOSTANDARD = LVCMOS33 | PERIOD = 100MHz;
+
+NET "rx"    LOC = A11  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;  # Header P3 Pin 8
+NET "tx"    LOC = B11  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;  # Header P3 Pin 7
+
+NET "nrst"  LOC = F14   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; # Switch[6] (SW1)
+
