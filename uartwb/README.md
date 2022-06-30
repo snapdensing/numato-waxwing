@@ -17,12 +17,13 @@ To initiate a WB transaction, the following command format must be sent through 
 | 7    | Data [23:16]                                     |
 | 8    | Data [15:8]                                      |
 | 9    | Data [7:0]                                       |
+| 10   | Checksum                                         |
 
-The table shown above assumes 32-bit address and 32-bit data for the wishbone bus. For reads, Data bytes (6 to 9) are ignored (but must still be sent).
+The table shown above assumes 32-bit address and 32-bit data for the wishbone bus. For reads, Data bytes (6 to 9) are ignored (but must still be sent). The Checksum is simply the XOR of all non-checksum bytes and 0xFF.
 
 ## Response
 
-After sending a command, the interface should reply with a byte stream through UART if a successful acknowledge is received by the wishbone bus. The first byte sent just echoes byte 0 (transaction type). For reads, the succeeding bytes are the data bytes read, MSB first. For writes, there are no further bytes sent after the first.
+After sending a command, the interface should reply with a byte stream through UART if a successful acknowledge is received by the wishbone bus. The first byte sent just echoes byte 0 (transaction type). For reads, the succeeding bytes are the data bytes read, MSB first. For writes, there are no further bytes sent after the first. Detection of incorrect packets sent is done by recalculating the checksum at the FPGA side and comparing it to the received checksum. In case of mismatch, the interface returns 0xFF.
 
 # UART to Wishbone interface demo
 
